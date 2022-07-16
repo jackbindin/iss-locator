@@ -21,8 +21,6 @@ public class SatelliteLocationController {
 
     @GetMapping("satellite/iss")
     public ResponseEntity<Void> getSatelliteById() throws SQLException {
-        //https://www.google.com/maps/dir/Pontoppidans+gate+15B,+0462+Oslo/Bydel+Sagene,+Oslo/Torshov,+Oslo/Nationaltheatret,+Johanne+Dybwads+plass+1,+0161+Oslo/
-        satelliteService.getSatelliteById(25544);
         String locationsString = "https://www.google.com/maps/dir/";
         List<SatelliteLocation> locations = satelliteService.getAllSatelliteLocations();
         for(SatelliteLocation satelliteLocation:satelliteService.getAllSatelliteLocations()){

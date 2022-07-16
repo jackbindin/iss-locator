@@ -5,6 +5,6 @@ import com.example.demo.model.SatelliteLocation;
 import java.util.List;
 
 public interface SatelliteServiceInterface {
-    SatelliteLocation getSatelliteById(int id);
+    void refreshStoredLocation();
     List<SatelliteLocation> getAllSatelliteLocations();
 }
