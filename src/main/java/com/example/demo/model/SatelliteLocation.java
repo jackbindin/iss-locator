@@ -54,6 +54,11 @@ public class SatelliteLocation {
         this.units = units;
     }
 
+    public SatelliteLocation(long satelliteId, String name){
+        this.satelliteId = satelliteId;
+        this.name = name;
+    }
+
     public long getSatelliteId() {
         return satelliteId;
     }
