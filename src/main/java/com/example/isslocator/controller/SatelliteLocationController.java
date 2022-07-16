@@ -17,10 +17,9 @@ public class SatelliteLocationController {
     @Autowired
     SatelliteServiceInterface satelliteService;
 
-    @GetMapping("satellite/isslocator")
+    @GetMapping("satellite/iss")
     public ResponseEntity<Void> getIssLocations() throws SQLException {
         String locationsString = "https://www.google.com/maps/dir/";
-        List<SatelliteLocation> locations = satelliteService.getAllSatelliteLocations();
         for(SatelliteLocation satelliteLocation:satelliteService.getAllSatelliteLocations()){
             locationsString=locationsString + satelliteLocation.getLatitude() + "," + satelliteLocation.getLongitude() + "/";
         }
