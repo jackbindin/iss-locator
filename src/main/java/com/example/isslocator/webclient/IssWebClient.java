@@ -1,6 +1,6 @@
-package com.example.demo.webclient;
+package com.example.isslocator.webclient;
 
-import com.example.demo.model.SatelliteLocation;
+import com.example.isslocator.model.SatelliteLocation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.reactive.function.client.WebClient;

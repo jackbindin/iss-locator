@@ -1,6 +1,6 @@
-package com.example.demo.service;
+package com.example.isslocator.service;
 
-import com.example.demo.model.SatelliteLocation;
+import com.example.isslocator.model.SatelliteLocation;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
-package com.example.demo.config;
+package com.example.isslocator.config;
 
-import com.example.demo.webclient.IssWebClient;
-import com.example.demo.webclient.IssWebClientInterface;
+import com.example.isslocator.webclient.IssWebClient;
+import com.example.isslocator.webclient.IssWebClientInterface;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;

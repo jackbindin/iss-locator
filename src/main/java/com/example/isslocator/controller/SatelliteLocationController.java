@@ -1,7 +1,7 @@
-package com.example.demo.controller;
+package com.example.isslocator.controller;
 
-import com.example.demo.model.SatelliteLocation;
-import com.example.demo.service.SatelliteServiceInterface;
+import com.example.isslocator.model.SatelliteLocation;
+import com.example.isslocator.service.SatelliteServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +17,7 @@ public class SatelliteLocationController {
     @Autowired
     SatelliteServiceInterface satelliteService;
 
-    @GetMapping("satellite/iss")
+    @GetMapping("satellite/isslocator")
     public ResponseEntity<Void> getIssLocations() throws SQLException {
         String locationsString = "https://www.google.com/maps/dir/";
         List<SatelliteLocation> locations = satelliteService.getAllSatelliteLocations();

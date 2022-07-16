@@ -1,6 +1,6 @@
-package com.example.demo.webclient;
+package com.example.isslocator.webclient;
 
-import com.example.demo.model.SatelliteLocation;
+import com.example.isslocator.model.SatelliteLocation;
 import reactor.core.publisher.Mono;
 
 public interface IssWebClientInterface {

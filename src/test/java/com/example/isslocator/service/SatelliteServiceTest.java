@@ -1,8 +1,8 @@
-package com.example.demo.service;
+package com.example.isslocator.service;
 
-import com.example.demo.model.SatelliteLocation;
-import com.example.demo.repository.IssRepository;
-import com.example.demo.webclient.IssWebClientInterface;
+import com.example.isslocator.model.SatelliteLocation;
+import com.example.isslocator.repository.IssRepository;
+import com.example.isslocator.webclient.IssWebClientInterface;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

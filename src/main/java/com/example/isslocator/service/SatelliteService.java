@@ -1,8 +1,8 @@
-package com.example.demo.service;
+package com.example.isslocator.service;
 
-import com.example.demo.model.SatelliteLocation;
-import com.example.demo.repository.IssRepository;
-import com.example.demo.webclient.IssWebClientInterface;
+import com.example.isslocator.model.SatelliteLocation;
+import com.example.isslocator.repository.IssRepository;
+import com.example.isslocator.webclient.IssWebClientInterface;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -28,10 +28,10 @@ public class SatelliteService implements SatelliteServiceInterface{
     public void refreshStoredLocation() {
         SatelliteLocation satelliteLocation = issWebClient.satelliteById(ISS_ID).block();
         issRepository.save(satelliteLocation);
-        log.info("New iss location saved at :"+ LocalDateTime.now());
+        log.info("New isslocator location saved at :"+ LocalDateTime.now());
         while(issRepository.findAll().size()>MAX_TABLE_SIZE){
             issRepository.delete(issRepository.findAll().get(0));
-            log.info("Reached max storage of locations ("+MAX_TABLE_SIZE+") Deleting oldest iss location");
+            log.info("Reached max storage of locations ("+MAX_TABLE_SIZE+") Deleting oldest isslocator location");
         }
     }
 
